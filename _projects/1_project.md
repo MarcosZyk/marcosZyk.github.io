@@ -5,7 +5,7 @@ description: IIoT Native Distributed DBMS
 img: assets/img/iotdb_logo.jpg
 importance: 1
 category: Database
-[comment]: <> (related_publications: true)
+redirect: https://iotdb.apache.org/
 ---
 
 Every project has a beautiful feature showcase page.
