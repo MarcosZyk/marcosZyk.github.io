@@ -2,7 +2,6 @@
 layout: page
 title: Projects
 permalink: /projects/
-
 [comment]: <> (description: A growing collection of your cool projects.)
 nav: true
 nav_order: 3
