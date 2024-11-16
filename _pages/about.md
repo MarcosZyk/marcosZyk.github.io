@@ -16,9 +16,10 @@ profile:
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+latest_posts: false
 ---
 
-## about me
+## About Me
 
 I am a PhD student in the Department of Computer Science & Engineering (CSE) at the Hong Kong University of Science and Technology (HKUST), supervised by Prof. [Wei Wang](https://www.cse.ust.hk/~weiwa/) and Prof. [Binhang Yuan](https://binhangyuan.github.io/site/). 
 
@@ -26,7 +27,7 @@ I achieved my master degree from School of Software, Tsinghua University, superv
 
 <br>
 
-## research interests
+## Research Interests
 
 Currently, I am working on machine learning systems. 
 
