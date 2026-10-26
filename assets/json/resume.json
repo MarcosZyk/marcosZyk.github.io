@@ -10,7 +10,7 @@
       "area": "Computer Science and Engineering",
       "studyType": "Ph.D.",
       "startDate": "2024-09",
-      "courses": ["LLM systems"]
+      "courses": ["LLM systems", "AI Agent Serving"]
     },
     {
       "institution": "Tsinghua University",
@@ -29,6 +29,13 @@
     }
   ],
   "publications": [
+    {
+      "name": "Chorus: GPU–CPU Cooperative LLM Serving for Length-Skewed Decode",
+      "publisher": "Dong Chen and Yukun Zhou and Sheng Yao and Ruichuan Chen and Binhang Yuan and Shuai Wang and Luping Wang and Cheng Huang and Guodong Yang and Liping Zhang and Wei Wang",
+      "releaseDate": "2026-10-26",
+      "url": "https://sigops.org/s/conferences/atc/2026/accepted.html",
+      "summary": "A CPU assisted LLM serving system releasing long context KVCache pressure on GPUs."
+    },
     {
       "name": "Model-GLUE: Democratized LLM Scaling for A Large Model Zoo in the Wild",
       "publisher": "Xinyu Zhao and Guoheng Sun and Ruisi Cai and Yukun Zhou and Pingzhi Li and Peihao Wang and Bowen Tan and Yexiao He and Li Chen and Yi Liang and Beidi Chen and Binhang Yuan and Hongyi Wang and Ang Li and Zhangyang Wang and Tianlong Chen",
@@ -52,6 +59,11 @@
     }
   ],
   "awards": [
+    {
+      "title": "RedBird Scholarship",
+      "date": "2026-05",
+      "awarder": "Hong Kong University of Science&Technology"
+    },
     {
       "title": "First Prize of Scholarship",
       "date": "2023-11",
