@@ -50,6 +50,7 @@
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
+      {% assign equal_contribution_count = entry.equal_contribution | default: 0 | plus: 0 %}
       {% assign author_array_size = entry.author_array | size %}
 
       {% assign author_array_limit = author_array_size %}
@@ -61,6 +62,9 @@
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        {% if forloop.index <= equal_contribution_count %}
+          {% assign author_last_html = author_last_html | append: '<sup>*</sup>' %}
+        {% endif %}
         {% if site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
@@ -108,6 +112,10 @@
         {% assign more_authors_show = '' %}
         {%- for author in entry.author_array offset: author_array_limit -%}
           {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
+          {% assign author_index = author_array_limit | plus: forloop.index %}
+          {% if author_index <= equal_contribution_count %}
+            {% assign more_authors_show = more_authors_show | append: '*' %}
+          {% endif %}
           {% unless forloop.last %}
             {% assign more_authors_show = more_authors_show | append: ', ' %}
           {% endunless %}
@@ -181,6 +189,9 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
+    {% if equal_contribution_count > 0 %}
+      <div class="periodical"><sup>*</sup> Equal contribution.</div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
